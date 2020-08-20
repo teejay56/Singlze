@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".searchScr">
+
+    <ImageView
+        android:layout_width="29dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/backicon"
+        />
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:id="@+id/searchBackBtn"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="Search"
+        android:textSize="18sp"
+        android:textColor="#484a9b"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/searchHeader"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e1e1e1"
+        android:layout_marginTop="60dp"
+        android:id="@+id/headerSeparator"
+        android:orientation="horizontal"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_below="@+id/headerSeparator"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/searchBox"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/greycircular"
+            />
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/blacksearchic"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+        />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:hint="Search by Name/Singlze's ID/Tags..."
+            android:textColorHint="#e1e1e1"
+            android:inputType="textCapWords"
+            android:imeOptions="actionDone"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="39dp"
+            android:id="@+id/searchTxtField"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchBox"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:text="2 Results"
+        android:textSize="11sp"
+        android:textColor="@android:color/black"
+        android:id="@+id/resultsCountLbl"
+        android:visibility="gone"
+        />
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginRight="30dp"
+         android:layout_marginLeft="30dp"
+         android:text="Oops! No results found for your search."
+         android:layout_centerInParent="true"
+         android:textAlignment="center"
+         android:textSize="13sp"
+         android:textColor="@android:color/darker_gray"
+         android:id="@+id/noSearchResults"
+         android:visibility="gone"
+         />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/resultsCountLbl"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:divider="@null"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/searchResultsTbl"
+        android:background="@android:color/transparent"
+        android:visibility="gone"
+        ></ListView>
+</RelativeLayout>

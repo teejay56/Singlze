@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/demopicture"
+        android:layout_centerVertical="true"
+        android:id="@+id/searchCellPic"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toRightOf="@+id/searchCellPic"
+        android:layout_marginLeft="10dp"
+        >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Himanshu5163"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:id="@+id/searchResultUName"
+            />
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchResultUName"
+            android:text="Miles to go before i sleep"
+            android:textSize="10sp"
+            android:textColor="#e1e1e1"
+
+            android:id="@+id/searchUserStatus"
+            />
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/followicon"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/transparent"
+        android:id="@+id/searchfollowUserBtn"
+        />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/searchfollowUserBtn"
+        android:layout_marginRight="20dp"
+        android:id="@+id/countryFlagHolder"
+        >
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/flag"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="India"
+            android:textAlignment="center"
+            android:textSize="10sp"
+            android:textColor="#e1e1e1"
+            android:id="@+id/searchCountryName"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/countryFlagHolder"
+        android:layout_marginRight="15dp"
+        android:id="@+id/likesCountHolder"
+        >
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/hearticon"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="12.5K"
+            android:textSize="10sp"
+            android:textColor="#e1e1e1"
+            android:id="@+id/searchLikesCount"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/likesCountHolder"
+        android:layout_marginRight="15dp"
+        android:id="@+id/diamondCountHolder"
+        >
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/diamond"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="12.5K"
+            android:textSize="10sp"
+            android:textColor="#e1e1e1"
+            android:id="@+id/searchdiamondCount"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

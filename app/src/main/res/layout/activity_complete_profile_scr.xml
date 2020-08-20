@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".completeProfileScr">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cscroller"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Profile"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:textSize="22sp"
+                android:textColor="@color/primaryColor"
+                android:id="@+id/completeProHeader"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Introduce yourself to user's on Singlze"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/completeProHeader"
+                android:layout_marginTop="5dp"
+                android:id="@+id/completeProsubheader"
+                />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cprofile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/completeProsubheader"
+                android:src="@drawable/defpic"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:civ_border_width="0dp"
+                app:civ_border_color="#ffffff"
+
+                />
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/completeProsubheader"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent"
+                android:id="@+id/selectPictureBtn"
+                android:translationZ="6dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Provide us your basic details"
+                android:layout_below="@+id/cprofile_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="1dp"
+                android:textSize="18sp"
+                android:textColor="@color/primaryColor"
+                android:id="@+id/basicdetailsLbl"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter your Name"
+                android:textSize="11sp"
+                android:layout_marginLeft="30dp"
+                android:textColor="@android:color/black"
+                android:id="@+id/nameheader"
+                android:layout_below="@+id/basicdetailsLbl"
+                android:layout_marginTop="15dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/nameheader"
+                android:id="@+id/nameHolder"
+                android:layout_marginTop="5dp"
+                >
+
+               <ImageView
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:background="@drawable/greycircular"
+                   />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:hint="Enter your Full Name*"
+                    android:inputType="textCapWords"
+                    android:imeOptions="actionDone"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="17sp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:id="@+id/fullNameTxt"
+                    />
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How you identify yourself?"
+                android:textSize="11sp"
+                android:layout_marginLeft="30dp"
+                android:textColor="@android:color/black"
+                android:id="@+id/genderheader"
+                android:layout_below="@+id/nameHolder"
+                android:layout_marginTop="15dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/genderheader"
+                android:id="@+id/genderHolder"
+                android:layout_marginTop="5dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        >
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            app:srcCompat="@drawable/radiooff"
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/maleRadio"
+                            android:layout_centerVertical="true"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Male"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black"
+                            android:layout_toRightOf="@+id/maleRadio"
+                            android:layout_marginLeft="15dp"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/maleLbl"
+                            />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@android:color/transparent"
+                            android:text="0"
+                            android:background="@android:color/transparent"
+                            android:id="@+id/maleGenderBtn"
+                            />
+
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        >
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            app:srcCompat="@drawable/radiooff"
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/femaleRadio"
+                            android:layout_centerVertical="true"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Female"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black"
+                            android:layout_toRightOf="@+id/femaleRadio"
+                            android:layout_marginLeft="15dp"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/femaleLbl"
+                            />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@android:color/transparent"
+                            android:text="0"
+                            android:background="@android:color/transparent"
+                            android:id="@+id/femaleGenderBtn"
+                            />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dobheader"
+                android:textSize="11sp"
+                android:layout_marginLeft="30dp"
+                android:textColor="@android:color/black"
+                android:id="@+id/dobheader"
+                android:layout_below="@+id/genderHolder"
+                android:layout_marginTop="15dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/dobheader"
+                android:id="@+id/dobHolder"
+                android:layout_marginTop="5dp"
+                >
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/greycircular"
+                    />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:hint="Select Date Of Birth"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:inputType="phone"
+                    android:imeOptions="actionDone"
+                    android:textSize="17sp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:id="@+id/dobTxt"
+                    />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/selDOBbtn"
+                    />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set Your Singlze's ID"
+                android:textSize="11sp"
+                android:layout_marginLeft="30dp"
+                android:textColor="@android:color/black"
+                android:id="@+id/singlzeIDHeader"
+                android:layout_below="@+id/dobHolder"
+                android:layout_marginTop="15dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/singlzeIDHeader"
+                android:id="@+id/singlzeIDHolder"
+                android:layout_marginTop="5dp"
+                >
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/greycircular"
+                    />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:hint="Enter Your Singlze ID"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"
+                    android:textSize="17sp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:id="@+id/singlzeIDTxt"
+                    />
+
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set Password"
+                android:textSize="11sp"
+                android:layout_marginLeft="30dp"
+                android:textColor="@android:color/black"
+                android:id="@+id/cpasswordHeader"
+                android:layout_below="@+id/singlzeIDHolder"
+                android:layout_marginTop="15dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/cpasswordHeader"
+                android:id="@+id/cpasswordHolder"
+                android:layout_marginTop="5dp"
+                >
+
+
+               <ImageView
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:background="@drawable/greycircular"
+                   />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:hint="Set Password for account"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:inputType="textPassword"
+                    android:imeOptions="actionDone"
+                    android:textSize="17sp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:id="@+id/cpasswordTxt"
+                    />
+            </RelativeLayout>
+
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/cpasswordHolder"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:text="@string/info"
+                android:id="@+id/infoLbl"
+                />
+
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="44dp"
+                android:id="@+id/confirmCompletionBtn"
+                android:background="@drawable/greenbtn"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/infoLbl"
+                android:layout_marginTop="35dp"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/confirmCompletionBtn"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:text="Privacy Policy | Terms and Conditions"
+                    android:textSize="11sp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:layout_centerVertical="true"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_marginLeft="3dp"
+                    android:id="@+id/ctermsLbl"
+                    />
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/ctermsBtn"
+                    android:background="@android:color/transparent"
+                    android:textColor="@android:color/transparent"
+                    android:text="0"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:visibility="gone"
+        android:id="@+id/calendarHolder"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:alpha="0.7"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_centerInParent="true"
+            android:background="@android:color/white"
+
+
+            >
+        <DatePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dateSelectorDP"
+            >
+        </DatePicker>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:text="DONE"
+                android:textAllCaps="true"
+                android:background="@color/primaryColor"
+                android:layout_below="@+id/dateSelectorDP"
+                android:id="@+id/selectedDOBBtn"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/completeloadingScr"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:alpha="0.5"
+            />
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/spin_kit"
+                style="@style/SpinKitView.CubeGrid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                app:SpinKit_Color="@color/colorNavTxt"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Verifying and Signing up..."
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"
+                android:layout_below="@+id/spin_kit"
+                android:layout_marginTop="1dp"
+                android:id="@+id/verifyingLbl"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

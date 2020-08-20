@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    >
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="38dp"
+            android:background="@android:color/transparent"
+            android:id="@+id/termsOfUsageHolder"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/settbackoption"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:text="Terms of Usage"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:id="@+id/termsOfUsageLbl"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="38dp"
+            android:background="@android:color/transparent"
+            android:layout_below="@+id/termsOfUsageHolder"
+            android:layout_marginTop="20dp"
+            android:id="@+id/privacyPolicyHolder"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/settbackoption"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:text="Privacy Policy"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:id="@+id/privacyPolicyLbl"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="38dp"
+            android:background="@android:color/transparent"
+            android:layout_below="@+id/privacyPolicyHolder"
+            android:layout_marginTop="20dp"
+            android:id="@+id/feedbackHolder"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/settbackoption"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:text="Feedback"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:id="@+id/feedbackLbl"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="38dp"
+            android:background="@android:color/transparent"
+            android:layout_below="@+id/feedbackHolder"
+            android:layout_marginTop="20dp"
+            android:id="@+id/aboutUsHolder"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/settbackoption"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:text="About Us"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:id="@+id/aboutusLbl"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="38dp"
+            android:background="@android:color/transparent"
+            android:layout_below="@+id/aboutUsHolder"
+            android:layout_marginTop="20dp"
+            android:id="@+id/rateusHolder"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/settbackoption"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Give Review"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:id="@+id/rateusLbl"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(version 1.0.1)"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/versionLbl"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/demopicture"
+        android:layout_centerVertical="true"
+        android:id="@+id/followerCellPic"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@android:color/black"
+        android:text="Samantha"
+        android:layout_toRightOf="@+id/followerCellPic"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="70dp"
+        android:id="@+id/followerName"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/followerName"
+        android:layout_toRightOf="@+id/followerCellPic"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/followerSinglzeID"
+        android:textSize="11sp"
+        android:textColor="#828282"
+        android:text="Singlze's ID"
+        />
+     <ImageView
+         android:layout_width="60dp"
+         android:layout_height="50dp"
+         android:src="@drawable/followbtngreen"
+         android:scaleType="fitCenter"
+         android:id="@+id/followbtnback"
+         android:layout_alignParentRight="true"
+         />
+      <TextView
+          android:layout_width="60dp"
+          android:layout_height="50dp"
+          android:gravity="center"
+          android:textAlignment="center"
+          android:text="Follow"
+          android:layout_alignParentRight="true"
+          android:textColor="@android:color/white"
+          android:textSize="11sp"
+          android:id="@+id/followBtnTxt"
+          />
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:layout_alignParentRight="true"
+        android:id="@+id/cellFollowBtn"
+        />
+
+</RelativeLayout>

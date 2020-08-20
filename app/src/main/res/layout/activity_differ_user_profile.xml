@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".differUserProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:background="@android:color/black"
+            >
+
+            <android.support.v4.view.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/differimagePager"
+                ></android.support.v4.view.ViewPager>
+
+            <ImageView
+                android:layout_width="29dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/wbackicon"
+                />
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:id="@+id/differproBackBtn"
+                />
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:textColor="@android:color/black"
+
+                    android:text="Image 1 of 5"
+                    android:id="@+id/differimageCurrCountLbl"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            >
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/demopicture"
+                        android:id="@+id/differucircularImg"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="40dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        >
+
+                        <ImageView
+                            android:layout_width="5dp"
+                            android:layout_height="17dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/optionsic"
+                            />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:id="@+id/differproOptionsBtn"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/differucircularImg"
+                        android:layout_marginTop="5dp"
+
+                        >
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:src="@drawable/greendot"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Online"
+                                android:textSize="9sp"
+                                android:layout_marginLeft="15dp"
+                                android:textColor="@android:color/black"
+                                />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/differbasicinfoHolder"
+                        android:layout_toRightOf="@+id/differucircularImg"
+                        android:layout_marginLeft="10dp"
+                        android:layout_below="@+id/differucircularImg"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.25">
+                                <ImageView
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:src="@drawable/locicon"
+                                    android:scaleType="fitCenter"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Hometown"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="9sp"
+                                    android:layout_marginLeft="15dp"
+                                    android:textColor="@android:color/black"
+                                    android:id="@+id/differhometownLbl"
+                                    />
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.25">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true">
+                                    <ImageView
+                                        android:layout_width="16dp"
+                                        android:layout_height="10dp"
+                                        android:src="@drawable/indflag"
+                                        android:scaleType="fitCenter"
+                                        />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="India"
+                                        android:textSize="9sp"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="21dp"
+                                        android:textColor="@android:color/black"
+                                        android:id="@+id/differcountryHometown"
+                                        />
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.25">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true">
+                                    <ImageView
+                                        android:layout_width="16dp"
+                                        android:layout_height="10dp"
+                                        android:src="@drawable/maleicon"
+                                        android:scaleType="fitCenter"
+                                        />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Male - 28 years"
+                                        android:textSize="9sp"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="15dp"
+                                        android:id="@+id/differgenderageLbl"
+                                        android:textColor="@android:color/black"
+                                        />
+                                </RelativeLayout>
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.25">
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/differucircularImg"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/differuNameLbl"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/differuNameLbl"
+                        android:text="Singlze's ID"
+                        android:layout_toRightOf="@+id/differucircularImg"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="13sp"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/differuSinglzeIdLbl"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/differuSinglzeIdLbl"
+                        android:layout_marginTop="2dp"
+                        android:text="Hi, i am using Singlze"
+                        android:textSize="13sp"
+                        android:layout_toRightOf="@+id/differucircularImg"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/differuStatusLbl"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/differbtnanddiamondholder"
+                        android:layout_below="@+id/differbasicinfoHolder"
+                        android:layout_marginTop="10dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.33"
+                                >
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/greenbackbtn"
+                                    android:id="@+id/followbigImg"
+                                    android:scaleType="fitCenter"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Follow"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="14sp"
+                                    android:layout_centerInParent="true"
+                                    android:id="@+id/differgoLiveLbl"
+                                    />
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:id="@+id/differgoliveBtnpro"
+                                    />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.33"
+                                >
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    >
+                                    <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:src="@drawable/diamond"
+                                        />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="100"
+                                        android:textSize="14sp"
+                                        android:layout_centerHorizontal="true"
+                                        android:textColor="@android:color/black"
+                                        android:id="@+id/differdiamondCountLbl"
+                                        android:layout_marginTop="38dp"
+                                        />
+                                </RelativeLayout>
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.33"
+                                android:visibility="gone"
+                                >
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/greenbackbtn"
+                                    android:scaleType="fitCenter"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Chat"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="14sp"
+                                    android:layout_centerInParent="true"
+                                    android:id="@+id/differchatLbl"
+                                    />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/differbtnanddiamondholder"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/differfflHolder"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.33"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/black"
+                                    android:layout_alignParentRight="true"
+                                    ></LinearLayout>
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    >
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="12sp"
+                                        android:text="11.4K"
+                                        android:textColor="@android:color/black"
+                                        android:layout_centerHorizontal="true"
+                                        android:id="@+id/differfollowersCounterLbl"
+                                        />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="12sp"
+                                        android:text="Followers"
+                                        android:textColor="@android:color/black"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_below="@+id/differfollowersCounterLbl"
+                                        android:id="@+id/differfollowerStaticLbl"
+                                        />
+
+                                </RelativeLayout>
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:id="@+id/differfollowersProBtn"
+                                    />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.33"
+                                >
+                                <LinearLayout
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/black"
+                                    android:layout_alignParentRight="true"
+                                    ></LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    >
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="12sp"
+                                        android:text="0"
+                                        android:textColor="@android:color/black"
+                                        android:layout_centerHorizontal="true"
+                                        android:id="@+id/differfollowingCounterLbl"
+                                        />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="12sp"
+                                        android:text="Followers"
+                                        android:textColor="@android:color/black"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_below="@+id/differfollowingCounterLbl"
+                                        android:id="@+id/differfollowingStaticLbl"
+                                        />
+
+                                </RelativeLayout>
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:id="@+id/differfollowingProBtn"
+                                    />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.33"
+                                >
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    >
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="12sp"
+                                        android:text="0"
+                                        android:textColor="@android:color/black"
+                                        android:layout_centerHorizontal="true"
+                                        android:id="@+id/differlikesCounterLbl"
+                                        />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="12sp"
+                                        android:text="Followers"
+                                        android:textColor="@android:color/black"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_below="@+id/differlikesCounterLbl"
+                                        android:id="@+id/differlikesStaticLbl"
+                                        />
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="300dp"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/differfflHolder"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/differrecentFollowersHolder"
+                        >
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/greycircular"
+                            />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:srcCompat="@drawable/recentfollowicon"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/differrecentFollowersIcon"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="6dp"
+                            android:text="Recent Followers"
+                            android:textSize="15sp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/differrecentFollowersIcon"
+                            android:textColor="@android:color/black"
+                            android:id="@+id/differrecentFollowersLbl"
+                            />
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:src="@drawable/blackarrow"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitCenter"
+                            android:id="@+id/differblackarrow"
+                            />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/defpic"
+                            android:layout_toLeftOf="@+id/differblackarrow"
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/differfollower1"
+                            android:layout_centerVertical="true"
+                            />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/demopicture"
+                            android:layout_toLeftOf="@+id/differfollower1"
+                            android:layout_marginRight="5dp"
+                            android:id="@+id/differfollower2"
+                            android:layout_centerVertical="true"
+
+                            />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/demopicture"
+                            android:layout_toLeftOf="@+id/differfollower2"
+                            android:layout_marginRight="5dp"
+                            android:id="@+id/differfollower3"
+                            android:layout_centerVertical="true"
+
+                            />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="300dp"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/differrecentFollowersHolder"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/differbuydiamondsHolder"
+                        >
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/transbacktxt"
+                            />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:srcCompat="@drawable/diamondcircle"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/differbuydiamondsic"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="6dp"
+                            android:text="Buy Diamonds"
+                            android:textSize="15sp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/differbuydiamondsic"
+                            android:textColor="@android:color/black"
+                            android:id="@+id/differbuyDiamondsLbl"
+                            />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:id="@+id/differproBuyDiamondsBtn"
+                            />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="300dp"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/differbuydiamondsHolder"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/differtagsHolder"
+                        >
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/transbacktxt"
+                            />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:srcCompat="@drawable/tagsicon"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/differtagsic"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="6dp"
+                            android:text="Dance, music, acting"
+                            android:textSize="15sp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/differtagsic"
+                            android:textColor="@android:color/black"
+                            android:id="@+id/differtagsValLbl"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_below="@+id/differtagsHolder"
+                        android:background="@drawable/greycircular"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="About Me"
+                            android:textSize="15sp"
+                            android:textColor="@android:color/black"
+                            android:id="@+id/differaboutMeHeaderLbl"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/differaboutMeHeaderLbl"
+                            android:layout_marginTop="10dp"
+                            android:text="Hi, i am from thailand, and a dancer by profession. I know some good moves, and can entertain you anytime."
+                            android:textSize="12sp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:id="@+id/differabouteMeTxtLbl"
+                            />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/differprofileloadingScr"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:alpha="0.5"
+            />
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/num_spin_kit"
+                style="@style/SpinKitView.CubeGrid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                app:SpinKit_Color="@color/colorNavTxt"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please wait..."
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"
+                android:layout_below="@+id/num_spin_kit"
+                android:layout_marginTop="1dp"
+                android:id="@+id/num_verifyingLbl"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

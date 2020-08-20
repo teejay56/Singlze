@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    tools:context=".streamingScr">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/surfaceViewH"
+        >
+    <SurfaceView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cameraSurfaceView"
+        android:scaleX="1"
+        android:scaleY="1"
+        />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:id="@+id/overlaysHolder"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:srcCompat="@drawable/overlay"
+            android:scaleType="fitEnd"
+            android:alpha="0.6"
+            />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/redcancelic"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            />
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:translationZ="10dp"
+            android:id="@+id/stopStreamingBtn"
+            />
+         <RelativeLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_marginRight="20dp"
+             android:layout_marginTop="25dp"
+             >
+             
+             <ImageView
+                 android:layout_width="20dp"
+                 android:layout_height="20dp"
+                 app:srcCompat="@drawable/coinsicon"
+
+                 />
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="20dp"
+                 android:textColor="@android:color/white"
+                 android:layout_marginLeft="30dp"
+                 android:textSize="14sp"
+                 android:text="100"
+                 android:id="@+id/coinsEarnedLbl"
+                 />
+         </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:textSize="13sp"
+            android:textColor="@android:color/white"
+            android:text="Followers Gained: 12"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/followersGainedLbl"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/white"
+            android:layout_marginRight="40dp"
+            android:layout_above="@+id/followersGainedLbl"
+            android:layout_marginBottom="5dp"
+            ></LinearLayout>
+        <com.bosphere.fadingedgelayout.FadingEdgeLayout
+            android:id="@+id/fading_edge_layout"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="40dp"
+            app:fel_edge="top"
+            app:fel_size_top="80dp"
+            android:layout_above="@+id/followersGainedLbl"
+            android:layout_marginBottom="10dp"
+            >
+
+
+
+          <ListView
+              android:layout_width="match_parent"
+              android:layout_height="150dp"
+              android:background="@android:color/transparent"
+              android:id="@+id/commentsListV"
+
+              ></ListView>
+
+        </com.bosphere.fadingedgelayout.FadingEdgeLayout>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/heart"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            />
+        <TextView
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:layout_alignParentRight="true"
+            android:textColor="@android:color/white"
+            android:layout_alignParentBottom="true"
+            android:text="12K"
+            android:textAlignment="center"
+            android:layout_marginRight="10dp"
+            android:id="@+id/likesCount"
+            android:layout_marginBottom="2dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/nStreamInfoHolder"
+        >
+     <ImageView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:background="@android:color/black"
+         android:alpha="0.5"
+         />
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+            android:background="@android:color/white"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/redcancelic"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                />
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@android:color/transparent"
+                android:id="@+id/cancelStreamBtn"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Stream"
+                android:textColor="#575757"
+                android:textSize="18sp"
+                android:layout_marginTop="25dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/startStreamLbl"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="“Tell us what this stream is all about”"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:textColor="#575757"
+                android:id="@+id/startStreamSubheader"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/startStreamLbl"
+                />
+
+            <RelativeLayout
+                android:layout_width="280dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/startStreamSubheader"
+                android:layout_marginTop="30dp"
+                android:id="@+id/streamTitleHolder"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/optionback"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapWords"
+                    android:hint="Title"
+                    android:textColorHint="@android:color/black"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:id="@+id/streamTitleTxt"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="280dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/streamTitleHolder"
+                android:layout_marginTop="10dp"
+                android:id="@+id/streamTagsHolder"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/optionback"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapWords"
+                    android:hint="Tags(Comma separated)"
+                    android:textColorHint="@android:color/black"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:id="@+id/streamTagsTxt"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/streamTagsHolder"
+                android:layout_marginTop="30dp"
+                android:id="@+id/termsHolder"
+                >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/uncheck"
+                    android:id="@+id/checkedimg"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:text="I agree to terms and conditions"
+                    android:textSize="11sp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_toRightOf="@+id/checkedimg"
+                    android:layout_marginLeft="3dp"
+                    android:id="@+id/termsLbl"
+                    />
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/termsBtn"
+                    android:background="@android:color/transparent"
+                    android:textColor="@android:color/transparent"
+                    android:text="0"
+                    />
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="280dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/termsHolder"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/greenbtn"
+                android:text="GO LIVE"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:id="@+id/goliveBtn"
+                android:layout_marginBottom="10dp"
+                />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

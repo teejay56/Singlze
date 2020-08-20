@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".numberLoginScr">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/transparent"
+        android:layout_centerHorizontal="true"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loginheader"
+            android:layout_centerHorizontal="true"
+            android:textSize="22sp"
+            android:textColor="@color/primaryColor"
+            android:id="@+id/loginnumberHeader"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="@string/loginsubheader"
+            android:textColor="@android:color/black"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/loginnumberHeader"
+            android:layout_marginTop="5dp"
+            android:id="@+id/loginnumbersubheader"
+            />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cellnumber"
+            android:textSize="11sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/black"
+            android:id="@+id/cellnumberheader"
+            android:layout_below="@+id/loginnumbersubheader"
+            android:layout_marginTop="15dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="34dp"
+            android:background="@android:color/transparent"
+            android:layout_below="@+id/cellnumberheader"
+            android:id="@+id/txtFieldHolder"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            >
+
+           <ImageView
+               android:layout_width="300dp"
+               android:layout_height="34dp"
+               android:src="@drawable/greycircular"
+
+               />
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                android:layout_marginLeft="5dp"
+                android:text="+966"
+                android:id="@+id/countryCodeBtn"
+                />
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                app:srcCompat="@drawable/downarr"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/countryCodeBtn"
+                android:id="@+id/dArr"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:background="@android:color/transparent"
+                android:hint="Enter Phone Number"
+                android:inputType="phone"
+                android:imeOptions="actionDone"
+                android:layout_toRightOf="@+id/dArr"
+                android:textSize="17sp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:id="@+id/numberTxt"
+                />
+        </RelativeLayout>
+
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="44dp"
+            android:id="@+id/confirmLoginBtn"
+            android:background="@drawable/greenbtn"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txtFieldHolder"
+            android:layout_marginTop="35dp"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/cancelic"
+        />
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:layout_alignParentRight="true"
+        android:id="@+id/cancelLoginNumber"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/numloadingScr"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:alpha="0.5"
+            />
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/num_spin_kit"
+                style="@style/SpinKitView.CubeGrid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                app:SpinKit_Color="@color/colorNavTxt"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please wait..."
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"
+                android:layout_below="@+id/num_spin_kit"
+                android:layout_marginTop="1dp"
+                android:id="@+id/num_verifyingLbl"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

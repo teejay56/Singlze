@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:adjustViewBounds="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/livePic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_red_dark"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/demopicture"
+            android:adjustViewBounds = "true"
+
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/trans_overlay"
+            android:alpha="0.9"
+            android:id="@+id/overlaylayer"
+            />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="12.4K"
+        android:textColor="@android:color/white"
+        android:textSize="11sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/totalLikesLbl"
+        />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/hearticon"
+        android:layout_toLeftOf="@+id/totalLikesLbl"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="7dp"
+        android:layout_alignParentBottom="true"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/streamName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Isabella"
+            android:layout_marginLeft="5dp"
+            android:textColor="#DB9E07"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            >
+           <RelativeLayout
+               android:layout_width="20dp"
+               android:layout_height="20dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:civ_border_color="@android:color/white"
+                app:civ_border_width="1dp"
+                android:src="@drawable/defpicedit"
+                android:id="@+id/streamerPic"
+                />
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:translationZ="40dp"
+                android:background="@android:color/transparent"
+                android:id="@+id/viewStreamerProfile"
+                />
+           </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Himani Sharma"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="3dp"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                android:id="@+id/streamerName"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

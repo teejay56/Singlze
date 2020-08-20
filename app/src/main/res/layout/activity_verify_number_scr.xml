@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".verifyNumberScr">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/transparent"
+        android:layout_centerHorizontal="true"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/verifyheader"
+            android:layout_centerHorizontal="true"
+            android:textSize="22sp"
+            android:textColor="@color/primaryColor"
+            android:id="@+id/verifynumberHeader"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="@string/verifysubheader"
+            android:textColor="@android:color/black"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/verifynumberHeader"
+            android:layout_marginTop="5dp"
+            android:id="@+id/verifynumbersubheader"
+            />
+
+
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="44dp"
+            android:background="@drawable/greyrectangle"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/verifynumbersubheader"
+            android:id="@+id/codefieldholder"
+
+            android:layout_marginTop="20dp"
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:hint="Enter OTP"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:id="@+id/otpcode"
+                android:background="@android:color/transparent"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/codefieldholder"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/optionsHolder"
+            >
+
+
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="44dp"
+            android:text="@string/changenumber"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:background="@drawable/greenbtn"
+            android:id="@+id/changeNumberBtn"
+            />
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="44dp"
+            android:text="@string/resendCode"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            android:background="@drawable/greenbtn"
+            android:layout_below="@id/changeNumberBtn"
+            android:id="@+id/resendCodeBtn"
+            android:layout_centerHorizontal="true"
+            />
+        </RelativeLayout>
+
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="44dp"
+            android:id="@+id/confirmVerifyBtn"
+            android:background="@drawable/greenbtn"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/optionsHolder"
+            android:layout_marginTop="35dp"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/cancelic"
+        />
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:layout_alignParentRight="true"
+        android:id="@+id/cancelVerifyNumber"
+        />
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/loadingScr"
+       android:visibility="gone"
+       >
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:background="@android:color/black"
+           android:alpha="0.5"
+           />
+
+       <RelativeLayout
+           android:layout_width="200dp"
+           android:layout_height="wrap_content"
+           android:layout_centerInParent="true"
+           >
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.CubeGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/colorNavTxt"/>
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Verifying and Signing up..."
+               android:textSize="12sp"
+               android:textColor="@android:color/white"
+               android:textAlignment="center"
+               android:layout_below="@+id/spin_kit"
+               android:layout_marginTop="1dp"
+               android:id="@+id/verifyingLbl"
+               />
+       </RelativeLayout>
+   </RelativeLayout>
+</RelativeLayout>

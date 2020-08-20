@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginScr">
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/cancelic"
+        />
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:layout_alignParentRight="true"
+        android:id="@+id/cancelLoginNumber"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back!"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="22sp"
+        android:textColor="@color/primaryColor"
+        android:id="@+id/loginHeader"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="Please enter your password for account linked with +917696632788, to login with your 'Singlze' account."
+        android:textColor="@android:color/black"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/loginHeader"
+        android:layout_marginTop="5dp"
+        android:id="@+id/loginSubHeader"
+        />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Enter Password"
+        android:textSize="11sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/loginSubHeader"
+        android:textColor="@android:color/black"
+        android:id="@+id/passwordheader"
+        android:layout_marginTop="15dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="34dp"
+        android:background="@android:color/transparent"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/passwordheader"
+        android:id="@+id/passwordFieldHolder"
+        android:layout_marginTop="5dp"
+        >
+
+     <ImageView
+         android:layout_width="300dp"
+         android:layout_height="34dp"
+         android:src="@drawable/greycircular"
+         />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:imeOptions="actionDone"
+            android:textSize="17sp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:id="@+id/passwordTxt"
+            />
+    </RelativeLayout>
+
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="44dp"
+        android:id="@+id/forgotPassword"
+        android:text="Forgot Password?"
+        android:layout_below="@+id/passwordFieldHolder"
+        android:layout_marginTop="35dp"
+        android:background="@android:color/transparent"
+        android:textAllCaps="false"
+        android:textColor="@color/navBack"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="44dp"
+        android:id="@+id/cLoginBtn"
+        android:background="@drawable/greenbtn"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/forgotPassword"
+        android:layout_marginTop="5dp"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/loginloadingScr"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:alpha="0.5"
+            />
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/num_spin_kit"
+                style="@style/SpinKitView.CubeGrid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                app:SpinKit_Color="@color/colorNavTxt"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please wait..."
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"
+                android:layout_below="@+id/num_spin_kit"
+                android:layout_marginTop="1dp"
+                android:id="@+id/num_verifyingLbl"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Singlze</string>
+    <string name="punch_line">I do have a better half - Me</string>
+    <string name="livebroadcast">Live Broadcast</string>
+    <string name="shortvideos">Short Videos</string>
+    <string name="chat">Chat</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="loginsignup">Log In / Sign Up</string>
+    <string name="terms">Terms &amp; Conditions</string>
+    <string name="loginsubheader">Whether you are creating an account or signing back in, let\'s start with your number.</string>
+    <string name="loginheader">What\'s Your Number?</string>
+    <string name="cellnumber">Cell Phone Number</string>
+    <string name="fullname">What shall we call you?</string>
+    <string name="dobheader">How old are you?</string>
+    <string name="genderHeader">How you identify yourself?</string>
+    <string name="info">We never share your personal information to any third party with or without your consent. This information is solely collected for other users to know about you</string>
+    <string name="verifyheader">Verify Your Number</string>
+    <string name="changenumber">Change Number</string>
+    <string name="resendCode">Resend Code</string>
+    <string name="lastStep">Last step, introduce yourself!</string>
+    <string name="lastStepsub">Introduce yourself to us, and other users on Singlze. Provide us your basic details.</string>
+    <string name="verifysubheader">We\'ve sent you a SMS with an OTP, please enter that OTP to verify your number.</string>
+    <string name="title_activity_home_scr">HomeScr</string>
+    <string name="title_home">Home</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_live">Go Live</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_settings">Settings</string>
+    <string name="facebook_app_id">1992208520916251</string>
+    <string name="fb_login_protocol_scheme">fb1992208520916251</string>
+    <array name="SelectImage">
+        <item>Camera</item>
+        <item>Gallery</item>
+        <item>Cancel</item>
+    </array>
+</resources>

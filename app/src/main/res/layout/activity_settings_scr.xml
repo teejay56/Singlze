@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".settingsScr">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="29dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/backicon"
+                />
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                android:id="@+id/settingBackBtn"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="18dp"
+                android:id="@+id/settingHeader"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile Settings"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:layout_below="@+id/settingHeader"
+                android:textColor="@android:color/black"
+                android:id="@+id/profileSettingsHeader"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/profileSettingsHeader"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/settchangePassHolder"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/greycircular"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/settChangePassLbl"
+                    android:text="Change Password"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    />
+
+                <ImageView
+                    android:layout_width="3dp"
+                    android:layout_height="6dp"
+                    android:src="@drawable/barrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/changePassStartBtn"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/settchangePassHolder"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/settdelAccHolder"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/greycircular"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/settDelAccLbl"
+                    android:text="Delete Account"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    />
+
+                <ImageView
+                    android:layout_width="3dp"
+                    android:layout_height="6dp"
+                    android:src="@drawable/barrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/settDeleteAccBtn"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="App Settings"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:layout_below="@+id/settdelAccHolder"
+                android:textColor="@android:color/black"
+                android:id="@+id/appSettingsLbl"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/appSettingsLbl"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/settPrivacyHolder"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/greycircular"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/settPrivacyPolicy"
+                    android:text="Privacy Policy"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    />
+
+                <ImageView
+                    android:layout_width="3dp"
+                    android:layout_height="6dp"
+                    android:src="@drawable/barrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/settPrivacyHolder"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/settFeedbackHolder"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/greycircular"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/settFeedback"
+                    android:text="Feedback"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    />
+
+                <ImageView
+                    android:layout_width="3dp"
+                    android:layout_height="6dp"
+                    android:src="@drawable/barrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/settFeedbackHolder"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/settAboutHolder"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/greycircular"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/settAboutLbl"
+                    android:text="About Singlze"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    />
+
+                <ImageView
+                    android:layout_width="3dp"
+                    android:layout_height="6dp"
+                    android:src="@drawable/barrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:background="@android:color/transparent"
+                android:layout_below="@+id/settAboutHolder"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/settRateHolder"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/greycircular"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/settRateUsLbl"
+                    android:text="Rate Singlze"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    />
+
+                <ImageView
+                    android:layout_width="3dp"
+                    android:layout_height="6dp"
+                    android:src="@drawable/barrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Version 1.0.1"
+                android:textSize="10sp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/settRateHolder"
+                android:layout_marginTop="25dp"
+                android:textColor="#e1e1e1"
+                android:id="@+id/versionLbl"
+                />
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/nChangePasswordHolder"
+        android:translationZ="100dp"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:alpha="0.5"
+            />
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+            android:background="@android:color/white"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/redcancelic"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                />
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@android:color/transparent"
+                android:id="@+id/cancelChangePassBtn"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Password"
+                android:textColor="#575757"
+                android:textSize="18sp"
+                android:layout_marginTop="25dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/changePassHeaderLbl"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="“Change your 'Singlze' password”"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:textColor="#575757"
+                android:id="@+id/changePassSubheader"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/changePassHeaderLbl"
+                />
+
+            <RelativeLayout
+                android:layout_width="280dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/changePassSubheader"
+                android:layout_marginTop="30dp"
+                android:id="@+id/currentPassHolder"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/optionback"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:hint="Current Password"
+                    android:textColorHint="@android:color/black"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:id="@+id/currentPassTxt"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="280dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/currentPassHolder"
+                android:layout_marginTop="10dp"
+                android:id="@+id/newpasswordHolder"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/optionback"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:hint="New Password"
+                    android:textColorHint="@android:color/black"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:id="@+id/newPasswordTxt"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="280dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/newpasswordHolder"
+                android:layout_marginTop="10dp"
+                android:id="@+id/confirmPassHolder"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/optionback"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:hint="Confirm New Password"
+                    android:textColorHint="@android:color/black"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:id="@+id/confirmPassTxt"
+                    />
+            </RelativeLayout>
+
+
+            <Button
+                android:layout_width="280dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/confirmPassHolder"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/greenbtn"
+                android:text="Change Password"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:id="@+id/updatepasswordBtn"
+                android:layout_marginBottom="10dp"
+                />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/settloadingScr"
+        android:translationZ="110dp"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:alpha="0.5"
+            />
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/num_spin_kit"
+                style="@style/SpinKitView.CubeGrid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                app:SpinKit_Color="@color/colorNavTxt"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please wait..."
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"
+                android:layout_below="@+id/num_spin_kit"
+                android:layout_marginTop="1dp"
+                android:id="@+id/num_verifyingLbl"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

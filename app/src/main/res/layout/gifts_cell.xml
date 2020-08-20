@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="80dp">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/gift_img"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_below="@+id/gift_img"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        >
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/diamond"
+        android:id="@+id/gift_diamon_icon"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textColor="@android:color/white"
+        android:layout_toRightOf="@+id/gift_diamon_icon"
+        android:textSize="11sp"
+        android:layout_marginLeft="5dp"
+        android:text="20"
+        android:id="@+id/gift_cost_Lbl"
+        />
+    </RelativeLayout>
+</RelativeLayout>

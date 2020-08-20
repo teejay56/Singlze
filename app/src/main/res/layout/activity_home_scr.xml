@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".HomeScr">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_centerInParent="true"
+        android:text="Oops! There are no streamers rite now, why not try changing your country from filters? Tap filters on top right corner."
+        android:textSize="13sp"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"
+        android:id="@+id/noStreamersLbl"
+        />
+
+    <RelativeLayout
+        android:id="@+id/gridHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@android:color/white"
+        android:text="@string/title_home"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+
+            android:background="@android:color/transparent"
+            >
+            
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/searchic"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/searchic"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:id="@+id/searchField"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:imeOptions="actionDone"
+                android:layout_toRightOf="@+id/searchic"
+                android:hint="Search by tags"
+                android:textColorHint="@android:color/white"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/white"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/searchic"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="2dp"
+                ></LinearLayout>
+        </RelativeLayout>
+        
+        <GridView
+
+            android:id="@+id/liveCamGrid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:numColumns="2"
+            android:background="@android:color/white"
+            android:horizontalSpacing="2dp"
+            android:verticalSpacing="2dp"
+            ></GridView>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/navigation"
+        android:translationZ="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/navBack"
+        android:alpha="0.9"
+        android:layout_alignParentBottom="true"
+        ></RelativeLayout>
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:translationZ="50dp"
+        android:background="@android:color/transparent"
+        app:itemIconTint="@null"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/navigation"
+        app:labelVisibilityMode="unlabeled"
+        android:clipChildren="false"
+        >
+    </android.support.design.widget.BottomNavigationView>
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/sher_active"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/goLiveBtn"
+        android:translationZ="50dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="20dp"
+        >
+
+     <RelativeLayout
+         android:layout_width="164dp"
+         android:layout_height="30dp"
+         android:layout_marginLeft="20dp"
+         android:background="@android:color/transparent"
+         android:id="@+id/liveStreamOptHolder"
+         >
+
+         <ImageView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:src="@drawable/yellowround"
+             />
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:text="Live Streams"
+             android:textSize="17sp"
+             android:textColor="@android:color/black"
+             android:gravity="center"
+             android:textAlignment="center"
+             android:id="@+id/liveStreamOptLbl"
+             />
+     </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:id="@+id/searchOptHolder"
+            android:layout_alignParentRight="true"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/searchicon"
+                android:id="@+id/searchicon"
+                />
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@android:color/transparent"
+                android:id="@+id/searchBtn"
+                />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/filtericon"
+                android:layout_toRightOf="@+id/searchicon"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/filtericon"
+                />
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@android:color/transparent"
+                android:layout_toRightOf="@+id/searchBtn"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/filterBtn"
+                />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

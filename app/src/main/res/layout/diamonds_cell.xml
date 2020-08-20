@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:adjustViewBounds="true"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/livePic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/greycircular"
+            android:adjustViewBounds = "true"
+
+            />
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           >
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="0.6"
+               >
+               <ImageView
+                   android:layout_width="match_parent"
+                   android:layout_height="40dp"
+                   android:background="@drawable/leftrightedges"
+                   android:id="@+id/sherDiamondHeader"
+                   />
+               <ImageView
+                   android:layout_width="60dp"
+                   android:layout_height="60dp"
+                   android:layout_centerInParent="true"
+                   android:scaleType="fitCenter"
+                   android:id="@+id/packLogo"
+                   />
+           </RelativeLayout>
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="0.4"
+               >
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   >
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="0dp"
+                       android:layout_weight="0.5"
+                       >
+                       <ImageView
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:scaleType="fitCenter"
+                           android:src="@drawable/diamondinpackback"
+                           android:layout_centerInParent="true"
+                           android:layout_marginRight="5dp"
+                           android:layout_marginLeft="5dp"
+                           />
+                          <RelativeLayout
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_centerInParent="true"
+                              >
+
+                              <ImageView
+                                  android:layout_width="10dp"
+                                  android:layout_height="10dp"
+                                  android:src="@drawable/diamond"
+                                  android:id="@+id/ddicon"
+                                  />
+                              <TextView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_toRightOf="@+id/ddicon"
+                                  android:layout_marginLeft="5dp"
+                                  android:textColor="@android:color/white"
+                                  android:textSize="10sp"
+                                  android:id="@+id/packDiamondCountLbl"
+                                  android:text="100"
+                                  />
+                          </RelativeLayout>
+                   </RelativeLayout>
+
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="0dp"
+                       android:layout_weight="0.5"
+                       >
+                       <ImageView
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:scaleType="fitCenter"
+                           android:src="@drawable/pricetagback"
+                           android:layout_centerInParent="true"
+                           android:layout_marginRight="5dp"
+                           android:layout_marginLeft="5dp"
+                           />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textSize="10sp"
+                            android:textColor="@android:color/white"
+                            android:id="@+id/packCostLbl"
+                            />
+                   </RelativeLayout>
+
+               </LinearLayout>
+
+
+           </RelativeLayout>
+
+       </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

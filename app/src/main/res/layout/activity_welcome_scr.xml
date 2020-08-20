@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeScr">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/background"
+        />
+
+    <ImageView
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        app:srcCompat="@drawable/logo"
+        android:layout_centerInParent="true"
+        android:id="@+id/wlogo"
+        />
+
+    <ImageView
+        android:layout_width="220dp"
+        android:layout_height="65dp"
+        app:srcCompat="@drawable/nametxtimg"
+        android:layout_below="@+id/wlogo"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/wnameLogo"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/punch_line"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/wnameLogo"
+        android:id="@+id/wpunchline"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/primaryColor"
+        />
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@android:color/transparent"
+          android:layout_below="@+id/wpunchline"
+          android:layout_marginTop="20dp"
+          >
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/livebroadcast"
+              android:textSize="25sp"
+              android:textColor="@color/primaryColor"
+              android:layout_centerHorizontal="true"
+              android:id="@+id/lbroadcastw"
+              />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/shortvideos"
+              android:textSize="25sp"
+              android:textColor="@color/primaryColor"
+              android:layout_centerHorizontal="true"
+              android:layout_below="@+id/lbroadcastw"
+              android:id="@+id/shortvideosw"
+              android:layout_marginTop="10dp"
+              />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/chat"
+              android:textSize="25sp"
+              android:textColor="@color/primaryColor"
+              android:layout_centerHorizontal="true"
+              android:layout_below="@+id/shortvideosw"
+              android:id="@+id/chatlbl"
+              android:layout_marginTop="10dp"
+              />
+
+      </RelativeLayout>
+</RelativeLayout>

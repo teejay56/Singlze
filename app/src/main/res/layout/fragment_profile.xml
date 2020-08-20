@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageHolder"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:translationZ="5dp"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/gt"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#ffffff"
+                android:translationZ="5dp"
+            />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/editic"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="8dp"
+                android:translationZ="10dp"
+                />
+        </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageHolder"
+        android:layout_marginTop="10dp"
+        android:text="Samantha Jacobs"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/userNameLbl"
+        android:translationZ="5dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/userNameLbl"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/transparent"
+
+        android:id="@+id/optionsHolderPro"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/coinsHolder"
+
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/diamondic"
+                android:layout_centerVertical="true"
+                android:id="@+id/coinicon"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textColor="@android:color/white"
+                android:layout_toRightOf="@+id/coinicon"
+                android:layout_marginLeft="5dp"
+                android:textSize="14sp"
+                android:id="@+id/coinsLbl"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/coinsHolder"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/followersHolder"
+            >
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             >
+
+             <RelativeLayout
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight="0.5"
+                 android:layout_marginRight="1dp"
+                 >
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="13.4K"
+                     android:textSize="12sp"
+                     android:textColor="@android:color/white"
+                     android:id="@+id/followersCount"
+                     />
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="Followers"
+                     android:textSize="12sp"
+                     android:textColor="@android:color/white"
+                     android:id="@+id/followersLabel"
+                     android:layout_below="@+id/followersCount"
+                     />
+
+             </RelativeLayout>
+
+             <RelativeLayout
+                 android:layout_width="1dp"
+                 android:layout_height="match_parent"
+                 android:background="@android:color/white"
+                 ></RelativeLayout>
+
+             <RelativeLayout
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight="0.5"
+                 android:layout_marginLeft="1dp"
+                 >
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="13.4K"
+                     android:textSize="12sp"
+                     android:textColor="@android:color/white"
+                     android:textAlignment="textEnd"
+                     android:gravity="end"
+                     android:id="@+id/followingCount"
+                     />
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="Following"
+                     android:textSize="12sp"
+                     android:textColor="@android:color/white"
+                     android:id="@+id/followingLabel"
+                     android:textAlignment="textEnd"
+                     android:gravity="end"
+                     android:layout_below="@+id/followingCount"
+                     />
+
+             </RelativeLayout>
+
+         </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/followersHolder"
+            android:background="@android:color/transparent"
+            android:id="@+id/buyCreditHolder"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/transbacktxt"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/buycreditic"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/buycreditic"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="6dp"
+                android:text="Buy Credits"
+                android:textSize="17sp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/buycreditic"
+                android:textColor="@android:color/white"
+                android:id="@+id/buyCreditLbl"
+                />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/buyCreditHolder"
+            android:background="@android:color/transparent"
+            android:id="@+id/withdrawHolder"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/transbacktxt"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/diamondcircle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/withdrawic"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="6dp"
+                android:text="My Diamonds"
+                android:textSize="17sp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/withdrawic"
+                android:textColor="@android:color/white"
+                android:id="@+id/withdrawLbl"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/withdrawHolder"
+            android:background="@android:color/transparent"
+            android:id="@+id/changePassHolder"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/transbacktxt"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/helpdesk"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/changepassic"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="6dp"
+                android:text="Help Desk"
+                android:textSize="17sp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/changepassic"
+                android:textColor="@android:color/white"
+                android:id="@+id/changepassLbl"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:id="@+id/changePasswordBtn"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/changePassHolder"
+            android:background="@android:color/transparent"
+            android:id="@+id/logoutHolder"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/transbacktxt"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/settcircle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/logoutic"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="6dp"
+                android:text="Profile Settings"
+                android:textSize="17sp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/logoutic"
+                android:textColor="@android:color/white"
+                android:id="@+id/logoutLbl"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:id="@+id/profileSettBtn"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignTop="@+id/optionsHolderPro"
+            android:layout_alignLeft="@+id/optionsHolderPro"
+            android:background="@android:color/transparent"
+            android:id="@+id/supporter"
+            ></RelativeLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/supporter"
+
+            android:alpha="0.3"
+            android:scaleType="fitEnd"
+            app:srcCompat="@drawable/dotted_bg"/>
+
+    </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/nChangePasswordHolder"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:alpha="0.5"
+            />
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+            android:background="@android:color/white"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/redcancelic"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                />
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@android:color/transparent"
+                android:id="@+id/cancelChangePassBtn"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Password"
+                android:textColor="#575757"
+                android:textSize="18sp"
+                android:layout_marginTop="25dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/changePassHeaderLbl"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="“Change your 'Singlze' password”"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:textColor="#575757"
+                android:id="@+id/changePassSubheader"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/changePassHeaderLbl"
+                />
+
+            <RelativeLayout
+                android:layout_width="280dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/changePassSubheader"
+                android:layout_marginTop="30dp"
+                android:id="@+id/currentPassHolder"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/optionback"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:hint="Current Password"
+                    android:textColorHint="@android:color/black"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:id="@+id/currentPassTxt"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="280dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/currentPassHolder"
+                android:layout_marginTop="10dp"
+                android:id="@+id/newpasswordHolder"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/optionback"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:hint="New Password"
+                    android:textColorHint="@android:color/black"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:id="@+id/newPasswordTxt"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="280dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/newpasswordHolder"
+                android:layout_marginTop="10dp"
+                android:id="@+id/confirmPassHolder"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/optionback"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:hint="Confirm New Password"
+                    android:textColorHint="@android:color/black"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:id="@+id/confirmPassTxt"
+                    />
+            </RelativeLayout>
+
+
+            <Button
+                android:layout_width="280dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/confirmPassHolder"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/greenbtn"
+                android:text="Change Password"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:id="@+id/updatepasswordBtn"
+                android:layout_marginBottom="10dp"
+                />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
